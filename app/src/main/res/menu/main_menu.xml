@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Calendar View" />
+
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/home_icon"
+            android:title="Event View" />
+        <item
+            android:id="@+id/nav_addEvent"
+            android:icon="@drawable/home_icon"
+            android:title="Add Event" />
+
+    </group>
+
+
+    <item android:title="________________________" />
+
+    <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/Profile"
+                android:icon="@drawable/home_icon"
+                android:title="Profile" />
+
+            <item
+                android:id="@+id/name"
+                android:icon="@drawable/home_icon"
+                android:title="Name" />
+            <item
+                android:id="@+id/email"
+                android:icon="@drawable/home_icon"
+                android:title="Email" />
+
+
+    </group>
+
+</menu>

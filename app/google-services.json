@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "900716320028",
+    "project_id": "chronos-a266d",
+    "storage_bucket": "chronos-a266d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900716320028:android:e974636f97036d036196d9",
+        "android_client_info": {
+          "package_name": "com.app.chronos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900716320028-jarqel83at9kn7j1rmdthjqrkj78jvrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbgifsUiuydAMv91pfKg729dQYl1Z2x3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900716320028-jarqel83at9kn7j1rmdthjqrkj78jvrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900716320028:android:5c650552ffe4fc5b6196d9",
+        "android_client_info": {
+          "package_name": "com.second.chronos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900716320028-jarqel83at9kn7j1rmdthjqrkj78jvrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbgifsUiuydAMv91pfKg729dQYl1Z2x3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900716320028-jarqel83at9kn7j1rmdthjqrkj78jvrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
