@@ -1,0 +1,7 @@
+<root>
+    <item name='java.time.YearMonth java.time.YearMonth from(java.time.temporal.TemporalAccessor)'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val name="pure" val="true" />
+        </annotation>
+    </item>
+</root>

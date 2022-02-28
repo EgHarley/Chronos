@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cbc8f9"
+    tools:context=".Task">
+
+    <Button
+        android:id="@+id/back2"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:background="@drawable/back_ic"
+        android:fontFamily="@font/azonix"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="291dp"
+        android:layout_height="26dp"
+        android:fontFamily="@font/azonix"
+        android:text="SET TAsk"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <EditText
+        android:id="@+id/TaskTitle"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:hint="Add Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+
+    <TextView
+        android:id="@+id/selectview"
+        android:layout_width="208dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="100dp"
+        android:text="Select Date and Time:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Button
+        android:id="@+id/datePickerButton1"
+        style="?android:spinnerStyle"
+        android:layout_width="183dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="304dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/timeButton1"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:width="300dp"
+        android:height="100dp"
+        android:onClick="popTimePicker"
+        android:text="Time"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <EditText
+        android:id="@+id/TaskDes"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Event description"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" />
+
+    <Button
+        android:id="@+id/submit1"
+        android:layout_width="175dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/azonix"
+        android:text="Submit"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

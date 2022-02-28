@@ -1,46 +1,59 @@
 package com.app.chronos;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class AddEvent extends AppCompatActivity {
+import com.app.chronos.ui.home.CalendarAdapter;
 
-    EditText title,location,description;
-    Button addEvent;
-
+public class AddEvent extends AppCompatDialogFragment  {
+       private EditText title,location,description;
+       private   Button timeButton;
+   // private ExampleDialogListener listener;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_add_event);
-;
-        title = findViewById(R.id.EventTitle);
-        location = findViewById(R.id.EventPlace);
-        description = findViewById(R.id.EventDes);
-        addEvent = findViewById(R.id.submit);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+/*
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View views = inflater.inflate(R.layout.activity_add_event,null);
 
-        addEvent.setOnClickListener(new View.OnClickListener() {
+
+        builder.setView(views);
+        builder.setPositiveButton("Sumbit", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if (!title.getText().toString().isEmpty() && !location.getText().toString().isEmpty()
-                && !description.getText().toString().isEmpty()){
+            public void onClick(DialogInterface dialog, int i) {
+                String Title = title.getText().toString();
+                String eventplace = location.getText().toString();
+                String Description = description.getText().toString();
+                //listener.applyTexts(Title, eventplace, Description);
 
-                }else {
-                    Toast.makeText(AddEvent.this,"Please fill all the fields",Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
 
+
+        title=views.findViewById(R.id.EventTitle);
+        location=views.findViewById(R.id.EventPlace);
+        description=views.findViewById(R.id.EventDes);
+        timeButton=views.findViewById(R.id.eventTime);
+
+
+        builder.create();
+*/
     }
+
+
+
 
 }
