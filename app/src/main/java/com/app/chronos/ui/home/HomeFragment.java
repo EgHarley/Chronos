@@ -6,12 +6,14 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -79,6 +81,8 @@ public class HomeFragment<show> extends Fragment {
     Button timeButton;
     int hour, minute;
     EditText title,description,location;
+    //CheckBox checkBox;
+    //TextToSpeech tts;
 
     // Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
     //Context context;
@@ -108,12 +112,17 @@ public class HomeFragment<show> extends Fragment {
         t5 = root.findViewById(R.id.thu);
         t6 = root.findViewById(R.id.fri);
         t7 = root.findViewById(R.id.sat);
-        Load_setting();
+
+        //checkBox = root.findViewById(R.id.checkboxRemind);
+
 
 
         prev = root.findViewById(R.id.prevMonth);
+        prev.setBackgroundColor(0x00000000);
         next= root.findViewById(R.id.nxtMonth);
+        next.setBackgroundColor(0x00000000);
 
+        
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
 
          monthYearFromDate = selectedDate.format(formatter);
@@ -156,54 +165,6 @@ public class HomeFragment<show> extends Fragment {
 
 //end
 
-    private void Load_setting(){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        boolean chk_night = sp.getBoolean("Night",false);
-        if(chk_night){
-            ml.setBackgroundColor(Color.parseColor("#222222"));
-            calendarRecyclerView.setBackgroundColor(Color.parseColor("#222222"));
-            monthYearText.setTextColor(Color.parseColor("#ffffff"));
-            t1.setTextColor(Color.parseColor("#ffffff"));
-            t2.setTextColor(Color.parseColor("#ffffff"));
-            t3.setTextColor(Color.parseColor("#ffffff"));
-            t4.setTextColor(Color.parseColor("#ffffff"));
-            t5.setTextColor(Color.parseColor("#ffffff"));
-            t6.setTextColor(Color.parseColor("#ffffff"));
-            t7.setTextColor(Color.parseColor("#ffffff"));
-        }else {
-            ml.setBackgroundColor(Color.parseColor("#cbc8f9"));
-            calendarRecyclerView.setBackgroundColor(Color.parseColor("#cbc8f9"));
-            monthYearText.setTextColor(Color.parseColor("#000000"));
-            t1.setTextColor(Color.parseColor("#000000"));
-            t2.setTextColor(Color.parseColor("#000000"));
-            t3.setTextColor(Color.parseColor("#000000"));
-            t4.setTextColor(Color.parseColor("#000000"));
-            t5.setTextColor(Color.parseColor("#000000"));
-            t6.setTextColor(Color.parseColor("#000000"));
-            t7.setTextColor(Color.parseColor("#000000"));
-        }
-
-        String orien = sp.getString("ORIENTATION","false");
-        if("1".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        }else if("2".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        }else if("3".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        }
-
-    }
-
-    private void setRequestedOrientation ( int screenOrientationPortrait ) {
-    }
-
-    protected void OnResume(){
-        Load_setting();
-        super.onResume();
-    }
 
 
 
@@ -216,7 +177,8 @@ public class HomeFragment<show> extends Fragment {
         monthYearText = root.findViewById(R.id.monthYearTV);
         calendarRecyclerView = root.findViewById(R.id.calendarRecycleView);
         /* = daysInMonthArray(selectedDate);*/
-
+        //checkBox = root.findViewById(R.id.checkboxRemind);
+        //TextToSpeech tts = null;
 
         CalendarAdapter calendarAdapter = new CalendarAdapter(calendarRecyclerView,monthYearText,prev,next,monthYearFromDate,daysInMonth,getContext().getApplicationContext());
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext().getApplicationContext(), 7);
@@ -256,7 +218,8 @@ public class HomeFragment<show> extends Fragment {
 
         String currentDate = dateFormat.format(String.valueOf(calendar.getTime()));
         CurrentDate.setText(currentDate);
-        CurrentDate.setBackgroundColor(Color.parseColor("#FF0000"));
+        CurrentDate.setBackgroundColor(0x00000000);
+      //  CurrentDate.setBackgroundColor(Color.parseColor("#"));
 
 
     }

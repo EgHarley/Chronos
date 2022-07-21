@@ -24,6 +24,7 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder /*implements Vie
 
 
         public final TextView dayOfMonth;
+        public TextView today;
        // private final CalendarAdapter.OnItemListener onItemListener;
 
      public CalendarViewHolder(@NonNull View itemView) {

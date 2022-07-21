@@ -13,6 +13,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/timebox" />
+            <option value="$PROJECT_DIR$/timetable" />
+            <option value="$PROJECT_DIR$/timetableview" />
+            <option value="$PROJECT_DIR$/timetableview/timetable" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

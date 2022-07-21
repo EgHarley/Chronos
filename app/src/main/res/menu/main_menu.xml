@@ -9,9 +9,9 @@
 
 
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/remind"
             android:icon="@drawable/home_icon"
-            android:title="Calendar View" />
+            android:title="Reminder" />
 
         <item
             android:id="@+id/nav_event"

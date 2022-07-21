@@ -3,7 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_home">
+    app:startDestination="@id/nav_Dash">
+
+
+    <fragment
+        android:id="@+id/nav_Dash"
+        android:name="com.app.chronos.ui.Dashboard.MainActivity2"
+        android:label="@string/menu_Dash"
+        tools:layout="@layout/activity_main2" />
 
     <fragment
         android:id="@+id/nav_home"
@@ -18,11 +25,7 @@
         android:label="@string/menu_Event"
         tools:layout="@layout/fragment_event" />
 
-    <fragment
-        android:id="@+id/nav_Task"
-        android:name="com.app.chronos.ui.Task.TaskView"
-        android:label="@string/menu_Task"
-        tools:layout="@layout/fragment_task" />
+
 
 
 </navigation>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".navBar">
 
 
@@ -17,8 +18,11 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <include layout="@layout/content_main" />
-
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center" />
 
 
 
@@ -26,7 +30,23 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/Theme.Chronos.PopupOverlay" />
+        app:popupTheme="@style/Theme.Chronos.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="500dp"
+            android:layout_height="700dp"
+            android:background="@drawable/gradient" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="124dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="top|center"
+        app:srcCompat="@drawable/chronoslogo" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

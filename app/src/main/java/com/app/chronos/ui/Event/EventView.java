@@ -5,6 +5,7 @@
  import android.graphics.Color;
  import android.os.Bundle;
  import android.preference.PreferenceManager;
+ import android.speech.tts.TextToSpeech;
  import android.text.TextUtils;
  import android.view.LayoutInflater;
  import android.view.View;
@@ -29,6 +30,7 @@
  import com.google.firebase.database.DatabaseReference;
  import com.google.firebase.database.FirebaseDatabase;
  import com.google.firebase.database.ValueEventListener;
+ import com.ramotion.foldingcell.FoldingCell;
 
  import java.time.LocalDate;
  import java.time.format.DateTimeFormatter;
@@ -36,6 +38,7 @@
 
  public class EventView<playService> extends Fragment {
 
+     TextToSpeech tts;
      //String event_name,location,  event_description,  date, time,  monthyear;
     // ListView listView;
     // ArrayList<String>arrayList = new ArrayList<>();
@@ -65,12 +68,12 @@
      //RVAdapter adapter;
      DAOadded dao;
      private View root;
+     private View roots;
      // private View root;
      private SwipeRefreshLayout swipeRefreshLayout;
 
      String key = null;
 boolean isLoading=false;
-
 
 
 
@@ -80,7 +83,16 @@ boolean isLoading=false;
 
 
          root = inflater.inflate(R.layout.fragment_event, container, false);
+
+
+         // get our folding cell
+         final FoldingCell fc = (FoldingCell) root.findViewById(R.id.folding_cell);
+
+
+
          monthYearText = root.findViewById(R.id.monthYearTV);
+
+
          DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
 
          monthYearFromDate = selectedDate.format(formatter);
@@ -102,7 +114,7 @@ boolean isLoading=false;
          list = new ArrayList<>();
          daysOfMonth = new ArrayList<>();
          //  adapter = new RVAdapter(getActivity());
-         adapter = new RVAdapter(getContext(),list,daysOfMonth,monthYearFromDate);
+         adapter = new RVAdapter(getContext(),list,daysOfMonth,monthYearFromDate,fc);
          recyclerView.setLayoutManager(manager);
          recyclerView.setAdapter(adapter);
          dao = new DAOadded();
@@ -207,38 +219,13 @@ boolean isLoading=false;
 
 
 
-    private void Load_setting(){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        boolean chk_night = sp.getBoolean("Night",false);
-        if(chk_night){
-            ml.setBackgroundColor(Color.parseColor("#222222"));
-            //cl.setBackgroundColor(Color.parseColor("#222222"));
-            //monthYearText.setTextColor(Color.parseColor("#ffffff"));
-        }else {
-            ml.setBackgroundColor(Color.parseColor("#cbc8f9"));
-            //cl.setBackgroundColor(Color.parseColor("#cbc8f9"));
-            //monthYearText.setTextColor(Color.parseColor("#000000"));
-        }
 
-        String orien = sp.getString("ORIENTATION","false");
-        if("1".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        }else if("2".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        }else if("3".equals(orien)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-        }
-
-    }
 
     private void setRequestedOrientation ( int screenOrientationPortrait ) {
     }
 
     protected void OnResume(){
-        Load_setting();
         super.onResume();
     }
 

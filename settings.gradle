@@ -1,2 +1,5 @@
-include ':app'
+include ':timebox'
+include ':timetableview:timetable'
+include ':timetableview'
+include ':app',':timetable'
 rootProject.name = "Chronos"

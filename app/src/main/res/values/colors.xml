@@ -12,4 +12,8 @@
     <color name="blue">#5DC4FB</color>
     <color name="pech">#FFE5B4</color>
     <color name="ge">#F5DEB3</color>
+    <color name="biyol">#753a88</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
 </resources>

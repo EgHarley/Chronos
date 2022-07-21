@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/hmfrag"
-    android:background="#cbc8f9"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_gravity="center"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
 
@@ -20,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="2dp">
 
             <Button
                 android:layout_width="0dp"
@@ -28,8 +36,8 @@
                 android:layout_weight="1"
                 android:text="@string/Backward"
                 android:id="@+id/prevMonth"
-                android:textColor="@color/black"
-                android:background="@null"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
                 android:textStyle="bold"
                 android:onClick="previousMonthAction"
                 android:textSize="20sp"
@@ -43,7 +51,7 @@
                 android:text="Jan 2022"
                 android:textSize="20sp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 />
 
@@ -54,9 +62,9 @@
                 android:layout_weight="1"
                 android:text="@string/Forward"
                 android:id="@+id/nxtMonth"
-                android:textColor="@color/black"
-                android:background="@null"
+                android:textColor="@color/white"
                 android:textStyle="bold"
+                android:layout_marginRight="20dp"
                 android:onClick="nextMonthAction"
                 android:textSize="20sp"
                 tools:ignore="OnClick" />
@@ -71,77 +79,84 @@
 
             <TextView
                 android:id="@+id/sun"
-                android:layout_width="0dp"
+                android:layout_width="2dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="SUN"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/mon"
-                android:layout_width="0dp"
+                android:layout_width="2dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="MON"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/tue"
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TUE"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/wed"
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="WED"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/thu"
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="THU"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/fri"
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="FRI"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/sat"
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="SAT"
-                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:textColor="@color/white"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
@@ -153,8 +168,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calendarRecycleView"
             android:layout_width="match_parent"
-            android:layout_height="600dp" />
-
+            android:layout_height="630dp" />
 
 
 

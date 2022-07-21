@@ -2,14 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
-    android:layout_height="400dp"
+    android:layout_height="500dp"
     android:layout_gravity="center"
-    android:background="#cbc8f9"
+    android:background="#32284a"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="348dp"
-        android:layout_height="400dp"
+        android:layout_height="443dp"
         android:layout_gravity="center">
 
 
@@ -18,9 +18,10 @@
             android:layout_width="291dp"
             android:layout_height="26dp"
             android:fontFamily="@font/azonix"
-            android:text="SET EVENT"
+            android:text="SET TASK"
             android:textAlignment="center"
             android:textSize="25sp"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.28"
@@ -36,8 +37,10 @@
             android:layout_marginBottom="29dp"
             android:ems="10"
             android:hint="Add Title"
+            android:textColorHint="@color/white"
             android:inputType="textPersonName"
             android:textAlignment="center"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"
@@ -55,6 +58,8 @@
             android:hint="Add place"
             android:inputType="textPersonName"
             android:textAlignment="center"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"
@@ -63,19 +68,39 @@
             app:layout_constraintVertical_bias="0.481" />
 
         <Button
-            android:id="@+id/eventTime"
-            android:layout_width="187dp"
+            android:id="@+id/eventTimeStart"
+            android:layout_width="100dp"
             android:layout_height="46dp"
-            android:width="300dp"
+            android:gravity="center"
+            android:onClick="popTimePicker"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.644"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/eventTimeEnd"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:width="100dp"
             android:height="100dp"
             android:gravity="center"
             android:onClick="popTimePicker"
-            android:text="Time"
+            android:text="End"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.391"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.794"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.644"
             tools:ignore="OnClick" />
@@ -88,12 +113,27 @@
             android:hint="Add description"
             android:inputType="textPersonName"
             android:textAlignment="center"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.854" />
+
+        <CheckBox
+            android:id="@+id/checkboxRemind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder 15 mins"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.974" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

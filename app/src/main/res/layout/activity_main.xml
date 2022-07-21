@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cbc8f9"
+    android:background="#32284A"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="451dp"
+        android:layout_height="332dp"
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,14 +18,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.117"
-        app:srcCompat="@drawable/chronos3" />
-
+        app:srcCompat="@drawable/chronoslogo" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
 
 
         <Button
@@ -40,6 +41,7 @@
             android:textSize="15dp" />
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="198dp"

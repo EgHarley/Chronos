@@ -59,7 +59,7 @@ public class navBar extends AppCompatActivity implements NavigationView.OnNaviga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav_bar);
 
-
+        /*
         swipeRefreshLayout = findViewById(R.id.swipe_refresh);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -67,7 +67,7 @@ public class navBar extends AppCompatActivity implements NavigationView.OnNaviga
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
                 mAppBarConfiguration = new AppBarConfiguration.Builder(
-                        R.id.nav_home, R.id.nav_Event, R.id.nav_Task)
+                        R.id.nav_home, R.id.nav_Event, R.id.nav_Dash)
                         .setDrawerLayout(drawer)
                         .build();
                 //end
@@ -75,6 +75,8 @@ public class navBar extends AppCompatActivity implements NavigationView.OnNaviga
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
+
+         */
 
 
 
@@ -100,7 +102,7 @@ public class navBar extends AppCompatActivity implements NavigationView.OnNaviga
         navigationView.setNavigationItemSelectedListener((this));
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_Event, R.id.nav_Task)
+                R.id.nav_home, R.id.nav_Event, R.id.nav_Dash)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -179,10 +181,9 @@ public class navBar extends AppCompatActivity implements NavigationView.OnNaviga
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
         switch (item.getItemId()){
-            case R.id.action_settings:
-                Intent intent= new Intent(this, Preference.class);
+            case R.id.actionsettings:
+                Intent intent= new Intent(navBar.this, Preference.class);
                 startActivity(intent);
-                break;
 
         }
         return super.onOptionsItemSelected(item);

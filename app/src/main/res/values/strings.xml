@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Chronos</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,10 +11,34 @@
     <string name="api_key">AIzaSyBeUyCR7LUdXI4VN4qJTvWXHWdcI6Nw_d0</string>
     <string name="vertical_ellipsis">&#8942;</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_Event">View Event</string>
-    <string name="menu_Task">View Task</string>
+    <string name="menu_home">Calendar</string>
+    <string name="menu_Event">Task</string>
+    <string name="menu_Dash">Dashboard</string>
+    <string name="remind">Reminder</string>
     <string name="Backward"><![CDATA[<]]></string>
     <string name="Forward"><![CDATA[>]]></string>
 
+
+
+<string-array name="header_title">
+    <item></item>
+    <item>Mon</item>
+    <item>Tue</item>
+    <item>Wed</item>
+    <item>Thu</item>
+    <item>Fri</item>
+    <item>Sat</item>
+    <item>Sun</item>
+</string-array>
+
+<string-array name="days">
+
+    <item >Mon</item>
+    <item >Tue</item>
+    <item >Wed</item>
+    <item >Thu</item>
+    <item >Fri</item>
+    <item >Sat</item>
+    <item >Sun</item>
+</string-array>
 </resources>

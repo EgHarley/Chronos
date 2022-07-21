@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.chronos">
-
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chronos">
-        <activity android:name=".Task"></activity>
+
+        <activity android:name=".Task" />
 
         <meta-data
             android:name="com.google.android.gms.vision"
@@ -37,16 +39,45 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
         <receiver
-            android:name=".ui.home.BootUpReceiver"
+            android:name=".ui.home.BootUpReceiver" android:enabled="true">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            <action android:name="android.intent.action.SCREEN_OFF" />
+            <action android:name="android.intent.action.SCREEN_ON" />
+            <action android:name="android.intent.action.AIRPLANE_MODE" />
+            <action android:name="android.intent.action." />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </receiver>
+
+        <receiver android:name=".ui.home.AlarmBrodcast"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="android.intent.action." />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".ui.home.AlarmBrodcast" />
-        <activity android:name=".ui.home.NotificationMessage"></activity>
+
+        <activity android:name=".ui.home.NotificationMessage" />
+
+        <activity android:name="com.app.chronos.ui.Dashboard.MainActivity2"
+            tools:ignore="Instantiatable">
+
+        </activity>
+        <activity android:name="com.app.chronos.ui.Dashboard.EditActivity"
+            tools:ignore="Instantiatable"></activity>
+
+        <activity android:name=".Preference"/>
     </application>
+
+
 
 </manifest>

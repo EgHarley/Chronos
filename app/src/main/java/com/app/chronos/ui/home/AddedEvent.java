@@ -15,22 +15,28 @@ public class AddedEvent {
     private String key;
     private String title;
     private String location;
-    private String time;
+    private String timeStart;
+    private String timeEnd;
     private String description;
     private String date;
     private String monthyear;
+    private String reminder;
+    private String voiceNotif;
 
 
-    public AddedEvent ( String title, String location, String timebutton, String description, String date, String monthyear ) {
+    public AddedEvent ( String title, String location, String timebutton, String timebuttonEnd, String description, String date, String monthyear,String reminder,String Vnotif) {
         this.title = title;
         this.location = location;
-        this.time = timebutton;
+        this.timeStart = timebutton;
+        this.timeEnd = timebuttonEnd;
         this.description = description;
         this.date = date;
         this.monthyear = monthyear;
+        this.reminder = reminder;
+        this.voiceNotif = Vnotif;
     }
 
-    public AddedEvent ( String toString, String toString1, String toString2, String toString3 ) {
+    public AddedEvent ( String toString, String toString1, String toString2, String toString3, String toString4,String toString5,String toString6) {
     }
 
     public String getTitle () {
@@ -58,12 +64,19 @@ public class AddedEvent {
     public void setDescription ( String description ) {
         this.description = description;
     }
-    public String getTime () {
-        return time;
+    public String getTimeStart () {
+        return timeStart;
     }
 
-    public void setTime ( String timebutton ) {
-        this.time = timebutton;
+    public void setTimeStart ( String timebutton ) {
+        this.timeStart = timebutton;
+    }
+    public String getTimeEnd () {
+        return timeEnd;
+    }
+
+    public void setTimeEnd ( String timebuttonEnd ) {
+        this.timeEnd = timebuttonEnd;
     }
 
     public String getDate () {
@@ -88,5 +101,21 @@ public class AddedEvent {
 
     public void setKey ( String key ) {
         this.key = key;
+    }
+
+    public String getReminder () {
+        return reminder;
+    }
+
+    public void setReminder ( String reminder ) {
+        this.reminder = reminder;
+    }
+
+    public String getVoiceNotif () {
+        return voiceNotif;
+    }
+
+    public void setVoiceNotif ( String voiceNotif ) {
+        this.voiceNotif = voiceNotif;
     }
 }
